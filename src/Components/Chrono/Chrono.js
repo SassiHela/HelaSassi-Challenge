@@ -11,7 +11,7 @@ export default class Chrono extends Component {
     clearInterval(this.state.myVar);
   };
   handleClickReset = () => {
-    this.setState({ count: 0 });
+    this.setState({ count: 0, myVar: clearInterval(this.state.myVar) });
   };
 
   handleClickStart = () => {
@@ -22,6 +22,7 @@ export default class Chrono extends Component {
     });
   };
 
+  // je l'ai pas utilisé
   change = () => {
     var elem = document.getElementById("Btn");
     if (elem.value === "Start") {
